@@ -5,13 +5,13 @@ public class Produit {
     private String description;
     private double prix;
     private char taxe;
-
-
-
     private String fournisseur;
     public int getNumero() {
         return numero;
     }
+
+
+
 
     public void setNumero(int numero) {
         this.numero = numero;

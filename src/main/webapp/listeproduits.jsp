@@ -45,28 +45,12 @@
         </tr>
 
 
-        <%-- Cette ligne modifie la description de l'objet 'p' en lui attribuant la valeur "request" --%>
-        <c:set target="${p}" property="description" value="request"/>
-
-        <%-- Cette ligne place l'objet 'p' dans l'attribut "p2" de l'objet 'request' --%>
-        <c:set target="${pageContext.request}" property="attribute.p2" value="${p}"/>
-
-        <%-- Cette ligne modifie à nouveau la description de l'objet 'p', en lui attribuant la valeur "session" --%>
-        <c:set target="${p}" property="description" value="session"/>
-
-        <%-- Cette ligne place l'objet 'p' dans l'attribut "p2" de la session --%>
-        <c:set target="${pageContext.session}" property="attribute.p2" value="${p}"/>
-
-        <%-- p représente chaque objet de la liste 'listeproduits' --%>
-        <%-- La boucle itère sur les objets de la liste, un à un --%>
-    </c:forEach>
-
     <tr>
         <td>${sessionScope.p2.numero} </td>
         <td>${p2.description}</td>
         <td>${p2.prix}</td>
         <td>
-            <a href="${urldetails}?numero{p2.numero}">Voir détails</a>
+            <a href="${urldetails}">Voir détails</a>
         </td>
     </tr>
 
